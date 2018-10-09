@@ -981,8 +981,27 @@ Component: Password Toggle
 ---
 Password toggle custom checkbox
 */
+.c-password-toggle-container{
+    display: block;
+    position: relative;
+}
 
+ .c-password-toggle__label{
+    position: absolute;
+    right: 12px;
+    top:16px;
+}
 
+.c-password-toggle__symbol{
+    height: 20px;
+    width:20px;
+    pointer-events: none;
+    fill: var(--color-neutral-x-light);
+}
+
+ .c-password-toggle__symbol--hide{
+    display:none;
+}
 /*
 	Component: Custom Like
 	---

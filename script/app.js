@@ -10,7 +10,7 @@ function handleFloatingLabel (){
         label = document.querySelector(".js-floating-label");
         console.log("label" + label);
         console.log("input" + input)
-    input.addEventListener('blur',function(){
+    input.addEventListener('focus',function(){
         if(event.input != '')
         {
             label.classList.add('is-floating')
@@ -20,4 +20,15 @@ function handleFloatingLabel (){
             label.classList.remove('is-floating')
         }
     })
+}
+
+function handlePasswordSwitcher(){
+    var passwordInput = document.querySelector(".js-password-input");
+    var passwordToggle = document.querySelector(".js-password-toggle-checkbox");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
     }
+}
