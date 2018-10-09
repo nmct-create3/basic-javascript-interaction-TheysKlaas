@@ -675,7 +675,24 @@ more padding on the right to avoid overlap
     line-height: 16px;
     color: var(--color-neutral-x-dark);
 }
+.c-label--floating{
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    padding: 4px 8px;
+    will-change: transform;
+    transform: translateY( 0 );
+    transition: transform 200ms ease-in-out;
+    box-shadow: 0 0 4px 4px rgba(255,255,255,0.8);
+    background: white;
+}
 
+.c-input:focus + .c-label--floating{
+    transform: translateY(-24px)
+}
+.is-floating{
+    transform: translateY(-24px);
+}
 /*
     Component: Dropdown Button
     ---
