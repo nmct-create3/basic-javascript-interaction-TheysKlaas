@@ -10,8 +10,8 @@ function handleFloatingLabel (){
         label = document.querySelector(".js-floating-label");
         console.log("label" + label);
         console.log("input" + input)
-    input.addEventListener('focus',function(){
-        if(event.input != '')
+    input.addEventListener('blur',function(){
+        if(input.value)
         {
             label.classList.add('is-floating')
         }
@@ -24,7 +24,7 @@ function handleFloatingLabel (){
 
 function handlePasswordSwitcher(){
     var passwordInput = document.querySelector(".js-password-input");
-    var passwordToggle = document.querySelector(".js-password-toggle-checkbox");
+    //var passwordToggle = document.querySelector(".js-password-toggle-checkbox");
 
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
