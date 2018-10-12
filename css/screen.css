@@ -693,12 +693,6 @@ more padding on the right to avoid overlap
 .is-floating{
     transform: translateY(-24px);
 }
-/*
-    Component: Dropdown Button
-    ---
-    Class to put on form buttons or
-*/
-
 
 
 /*
@@ -1009,11 +1003,82 @@ Password toggle custom checkbox
     display: block;
 }
 /*
+Component: Range Slider
+---
+*/
+.c-range{
+    display: block;
+    height: 8px;
+    padding: 0;
+    border-radius: 8px;
+    background-color: var(--color-neutral-xxxx-light);
+    border: 1px solid var(--color-neutral-xxx-light);
+}
+/* adjust slider for chrome */
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 8px;
+    background: var(--color-alpha );
+}
+.c-range-holder{
+    width: calc( 100% - 18px );
+}
+.c-range-holder::after{
+    content: attr(data-value);
+    display: inline-block;
+    width: 32px;
+    margin-top: 12px;
+    padding: 4px;
+    font-size: .8rem;
+    text-align: center;
+    border-radius: 4px;
+    background: var( --color-neutral-xxxx-light );
+    /* transform: scale( 0 ); */
+    transition: transform 200ms ease-in-out;
+    transform-origin: center top;
+}
+/*
+	Component: Dropdown Button
+	---
+*/
+.c-dropdown-container{
+    display: inline-block;
+    position: relative;
+}
+.c-button-dd{
+    display: inline-flex;
+    justify-content: space-evenly;
+    border: 1px solid var(--color-neutral-xxx-light);
+    border-radius: var(--radius);
+    background-color: #fff;
+    color: var(--color-neutral-xxxx-dark);
+    font-size: 16px;
+    line-height: 24px;
+    padding: 11px 16px;
+}
+.c-button-dd__symbol{
+    margin-left: 5px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    fill: var(--color-neutral-x-light);
+}
+.c-dropdown-list{
+    position: absolute;
+    display: none;
+}
+.c-dropdown-list__open{
+    display: block;
+}
+/*
 	Component: Custom Like
 	---
 	Custom like button
 */
-
 
 /*------------------------------------*\
 #UTILITIES
