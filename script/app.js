@@ -51,16 +51,38 @@ function handleQualityRange (){
     })
 
 }
-function handleDropdownButton (){
+function handleDropdownButton() {
+    let button = document.querySelector(".js-dropdown-headbutton")
 
-    let button = document.querySelector(".js-button-dd")
-    let buttonlist = document.querySelector(".js-dropdown-list")
 
-    button.addEventListener("click",function(event){
-        event.preventDefault();
-        // buttonlist.style.display = "block"
-        buttonlist.classList.toggle('c-dropdown-list__open');
-        
-    })
-    
+
+    button.addEventListener("click", function (e) {
+        //toogle container
+        let container = e.target.nextElementSibling;
+        container.classList.toggle("c-dropdown-buttons--visible");
+
+        //verander icon
+        e.target.firstElementChild.classList.toggle("c-button-icon--rotate")
+
+    });
+
 }
+// function handleDropdownButton (){
+
+//     let button = document.querySelector(".js-button-dd")
+//     let buttonlist = document.querySelector(".js-dropdown-list")
+//     let ddbutton = document.querySelectorAll(".c-button-dd")
+//     ddbutton = Array.from(ddbutton);
+//     button.addEventListener("click",function(event){
+//         event.preventDefault();
+//         // buttonlist.style.display = "block"
+//         buttonlist.classList.toggle('c-dropdown-list__open');
+        
+//     })
+//     console.log(ddbutton)
+//     console.log("map"+ddbutton.map)
+//     ddbutton.map(b=> b.addEventListener("click", function(e){
+//         e.preventDefault();
+//     }))
+    
+// }

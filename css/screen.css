@@ -1044,41 +1044,76 @@ Component: Range Slider
 	Component: Dropdown Button
 	---
 */
-.c-dropdown-container{
-    display: inline-block;
+.c-dropdown-container {
     position: relative;
 }
-.c-button-dd{
+
+.c-dropdown-button {
     display: inline-flex;
-    justify-content: space-evenly;
-    border: 1px solid var(--color-neutral-xxx-light);
-    border-radius: var(--radius);
-    background-color: #fff;
-    color: var(--color-neutral-xxxx-dark);
-    font-size: 16px;
+    border: 1px solid var(--color-neutral-x-light);
+    padding: 7px;
+    justify-content: center;
+    align-items: center;
     line-height: 24px;
-    padding: 11px 16px;
+    background-color: var(--color-neutral-xxxx-light);
+    box-shadow: var(--inset-shadow);
 }
-.c-button-dd__symbol{
-    margin-left: 5px;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    pointer-events: none;
-    fill: var(--color-neutral-x-light);
+
+.c-dropdown-button:active, .c-dropdown-button:focus {
+    box-shadow: var(--focus-shadow);
 }
-.c-dropdown-list{
+
+.c-button-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    fill: var(--color-neutral)
+}
+
+.c-button-icon--rotate {
+    transform: rotate(180deg);
+}
+
+.c-dropdown-buttons {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    display: none;
+    top: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 500ms ease-in-out;
 }
-.c-dropdown-list__open{
-    display: block;
+
+.c-dropdown-buttons--visible {
+    opacity: 1;
+    visibility: visible;
 }
 /*
 	Component: Custom Like
 	---
 	Custom like button
 */
+.c-like-container {
+    margin-top: 48px;
+}
+
+.c-like__label {
+    height: 24px;
+    width: 24px;
+}
+
+.c-like__icon {
+    fill: var(--color-neutral-x-light);
+    transition: transform 250ms ease-in-out;
+}
+
+.c-like__input:active+.c-like__label .c-like__icon {
+    transform: scale(0.90)
+}
+
+.c-like__input:checked+.c-like__label .c-like__icon {
+    fill: #D80027;
+}
 
 /*------------------------------------*\
 #UTILITIES
